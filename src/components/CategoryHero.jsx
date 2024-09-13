@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NeumorphismButton from "./Button";
 
 export const CategoryHero = () => {
   return (

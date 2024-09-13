@@ -504,7 +504,7 @@ function CategoriesComponents() {
         Job Categories
       </div> */}
       <CategoryHero />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 bg-gradient-to-b">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 ">
         {categories.slice(0, 8).map((category) => (
           <div
             key={category.id}
@@ -516,7 +516,7 @@ function CategoriesComponents() {
               }}
               className="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center"
             ></div>
-            <div className="w-56 md:w-64 -mt-10 shadow-lg rounded-lg bg-gray-700 overflow-hidden">
+            <div className="w-56 md:w-64 -mt-10 shadow-lg rounded-lg bg-gray-900 overflow-hidden">
               <div className="py-2  text-center font-bold uppercase tracking-wide text-gray-200">
                 {category.name}
               </div>
@@ -571,9 +571,6 @@ function CategoriesComponents() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="flex items-center justify-center w-11/12 mx-auto my-10 border-gray-900 border opacity-75  rounded-full">
-        {/* <div className="h-0.5 w-11/12 bg-gray-800"></div> */}
       </div>
     </div>
   );
