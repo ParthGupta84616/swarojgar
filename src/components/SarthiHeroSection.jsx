@@ -24,15 +24,27 @@ function SarthiHeroSection() {
           </p>
           <Link to="/login" className="btn mt-6">
             <button className="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none">
-              Login To Get Started
+              Start Your 14-Day Free Trial
             </button>
           </Link>
         </div>
+        <Link to="/why-us">
+          <button className="px-5 py-2 mt-2 text-base font-normal leading-5 text-center text-gray-500 capitalize  lg:mx-0 lg:w-auto focus:outline-none">
+            learn more
+          </button>
+        </Link>
 
         <WhyUsFeatures
           title="Sarthi AI: Your Smart, Free Job-Matching Assistant."
           description="Sarthi AI effortlessly connects you with ideal job opportunities and provides instant support for your queries, all at no cost."
-          advantages={["Personalized", "Instant", "Free", "Efficient", "Tailored", "Supportive"]}
+          advantages={[
+            "Personalized",
+            "Instant",
+            "Free",
+            "Efficient",
+            "Tailored",
+            "Supportive",
+          ]}
           imgSRC={SarthiHeroSectionImg}
         />
 

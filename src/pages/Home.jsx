@@ -10,7 +10,7 @@ function Home() {
     <>
     <div className="homebody lg:flex xl:h-[85vh] justify-between gap-4">
       <div className="lg:w-1/2 w-full h-full  ">
-        <h1 className="lg:text-7xl  (900) text-5xl md:p-6 lg:py-12 xl:p-20 p-12  text-gray-800 flex text-center justify-center items-center">
+        <h1 className="lg:text-7xl (900) text-5xl md:p-6 lg:py-12 xl:p-20 p-12  text-gray-800 flex text-center justify-center items-center">
           Welcome To SWAROJGAR
         </h1>
         <h1 className="lg:text-4xl text-2xl xl:px-5  text-gray-800 flex text-center">

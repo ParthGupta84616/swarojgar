@@ -3,7 +3,7 @@ import FAQimg from "../assets/FAQ.png";
 
 const FAQ = ({ faqItems }) => {
   return (
-    <div className="xl:flex xl:justify-between bg-gray-200">
+    <div className="xl:flex xl:justify-between bg-gray-100">
       <div className=" flex items-center justify-center xl:absolute xl:w-1/2  xl:m-0  xl:min-h-screen">
         <img src={FAQimg} alt="FAQ" className="  xl:w-96 w-64 rounded-full" />
       </div>

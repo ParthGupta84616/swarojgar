@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/Categories.css";
+import HeroBanner from "./HeroBanner";
 function Categories() {
   return (
-    <div>
+    <div className="">
       <svg
         version="1.1"
         id="home-anim"
@@ -12,11 +13,13 @@ function Categories() {
         y="0px"
         viewBox="0 0 1820 1080"
         style={{ enableBackground: "new 0 0 1820 1080" }}
+        className="absolute "
         xmlSpace="preserve"
       >
+        
         <g id="home">
           <defs>
-            <rect id="masque" y="0.4" width="1820" height="1080" />
+            <rect id="masque" y="0.4" width="3100" height="100vh" className="xl:h-[100vh]" />
           </defs>
           <clipPath id="cache">
             <use xlinkHref="#masque" style={{ overflow: "visible" }} />
@@ -120,6 +123,7 @@ function Categories() {
           </g>
         </g>
       </svg>
+      <HeroBanner />
     </div>
   );
 }
