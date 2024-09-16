@@ -749,84 +749,536 @@ export const data = {
 };
 
 export const eventsData = [
-    {
-      color: "blue",
-      imageUrl: `${event1}`,
-      title: "Women in Freelancing: Empowerment Workshop",
-      date: "October 22, 2024",
-      time: "3:00 PM - 5:00 PM",
-      location: "Virtual Event (Zoom)",
-      previewText:
-        "A workshop focused on empowering women freelancers with tools, resources, and strategies to succeed in a competitive industry.",
-      cta: "Join Now",
-    },
-    {
-      color: "red",
-      imageUrl: `${event2}`,
-      title: "Mastering Client Relationships",
-      date: "November 5, 2024",
-      time: "2:00 PM - 4:00 PM",
-      location: "Virtual Event (Google Meet)",
-      previewText:
-        "Learn how to manage client expectations, deliver high-quality work, and build lasting relationships with clients.",
-      cta: "Sign Up",
-    },
-    {
-      color: "green",
-      imageUrl: `${event3}`,
-      title: "Freelancer Career Growth: Tips & Tools",
-      date: "November 12, 2024",
-      time: "5:00 PM - 6:30 PM",
-      location: "Virtual Event (Zoom)",
-      previewText:
-        "Get insights from industry experts on how to scale your freelance career, attract high-paying clients, and develop a growth mindset.",
-      cta: "Reserve Seat",
-    },
-  ];
-  export const event_highlights = [
-    {
-      color: "blue",
+  {
+    color: "blue",
+    imageUrl: `${event1}`,
+    title: "Women in Freelancing: Empowerment Workshop",
+    date: "October 22, 2024",
+    time: "3:00 PM - 5:00 PM",
+    location: "Virtual Event (Zoom)",
+    previewText:
+      "A workshop focused on empowering women freelancers with tools, resources, and strategies to succeed in a competitive industry.",
+    cta: "Join Now",
+  },
+  {
+    color: "red",
+    imageUrl: `${event2}`,
+    title: "Mastering Client Relationships",
+    date: "November 5, 2024",
+    time: "2:00 PM - 4:00 PM",
+    location: "Virtual Event (Google Meet)",
+    previewText:
+      "Learn how to manage client expectations, deliver high-quality work, and build lasting relationships with clients.",
+    cta: "Sign Up",
+  },
+  {
+    color: "green",
+    imageUrl: `${event3}`,
+    title: "Freelancer Career Growth: Tips & Tools",
+    date: "November 12, 2024",
+    time: "5:00 PM - 6:30 PM",
+    location: "Virtual Event (Zoom)",
+    previewText:
+      "Get insights from industry experts on how to scale your freelance career, attract high-paying clients, and develop a growth mindset.",
+    cta: "Reserve Seat",
+  },
+];
+export const event_highlights = [
+  {
+    color: "blue",
     //   imageUrl: "https://picsum.photos/600/400",
     imageUrl: `${event4}`,
-      title: "Freelancer Success Stories",
-      date: "October 10, 2023",
-      time: "2:00 PM - 3:00 PM",
-      location: "Virtual Event (Zoom)",
-      previewText:
-        "Hear from freelancers who secured major projects and collaborations through our events. Their success stories inspire others to make the most of our community.",
-      cta: "View Highlights",
+    title: "Freelancer Success Stories",
+    date: "October 10, 2023",
+    time: "2:00 PM - 3:00 PM",
+    location: "Virtual Event (Zoom)",
+    previewText:
+      "Hear from freelancers who secured major projects and collaborations through our events. Their success stories inspire others to make the most of our community.",
+    cta: "View Highlights",
+  },
+  {
+    color: "red",
+    imageUrl: `${event5}`,
+    title: "Keynote Session: Navigating the Gig Economy",
+    date: "September 22, 2023",
+    time: "1:00 PM - 2:30 PM",
+    location: "Virtual Event (YouTube)",
+    previewText:
+      "Industry experts shared insights on how to thrive in the gig economy, covering topics from finding high-paying clients to managing work-life balance.",
+    cta: "Watch Now",
+  },
+  {
+    color: "green",
+    imageUrl: `${event6}`,
+    title: "Live Q&A with Industry Leaders",
+    date: "August 15, 2023",
+    time: "4:00 PM - 5:00 PM",
+    location: "Virtual Event (Google Meet)",
+    previewText:
+      "Freelancers had the opportunity to ask questions and receive expert guidance during our live Q&A session. The session provided valuable strategies to tackle freelance challenges.",
+    cta: "Watch Q&A",
+  },
+  {
+    color: "yellow",
+    imageUrl: `${event1}`,
+    title: "Panel Discussion: Future of Remote Work",
+    date: "July 18, 2023",
+    time: "3:00 PM - 4:30 PM",
+    location: "Virtual Event (Zoom)",
+    previewText:
+      "A forward-looking panel discussion about the evolving landscape of remote work, exploring new opportunities and challenges freelancers will face in the coming years.",
+    cta: "View Discussion",
+  },
+];
+
+export const newsletter = {
+  title: "Subscribe for the Latest Event Updates",
+  description:
+    "Stay informed and never miss an event! Subscribe to our newsletter to get the latest updates directly in your inbox.",
+  placeholder: "Enter your email address",
+  buttonText: "Subscribe",
+};
+
+export const JobsData = {
+  hero_section: {
+    title: "Find the Perfect Project or Post Your Opportunity",
+    subtitle:
+      "Whether you’re a company looking for top talent or a freelancer looking for exciting projects, you’ve come to the right place.",
+    cta_buttons: {
+      post_project: {
+        text: "Post a Project",
+        link: "#post-project-form",
+      },
+      browse_projects: {
+        text: "Browse Projects",
+        link: "#browse-projects",
+      },
+    },
+    search_bar: {
+      placeholder: "Search for projects or keywords",
+      enabled: true,
+    },
+  },
+  post_project_section: {
+    title: "Post a Project and Connect with Top Freelancers",
+    brief_description:
+      "Post your project, set your budget, and connect with skilled freelancers. Get work done quickly and efficiently.",
+    post_project_form: {
+      input_fields: [
+        {
+          name: "project_title",
+          label: "Project Title",
+          type: "text",
+          placeholder: "Enter project title",
+          required: true,
+        },
+        {
+          name: "project_description",
+          label: "Project Description",
+          type: "textarea",
+          placeholder: "Describe your project in detail",
+          required: true,
+        },
+        {
+          name: "required_skills",
+          label: "Required Skills",
+          type: "tags",
+          placeholder: "Add required skills",
+          required: true,
+        },
+        {
+          name: "project_budget",
+          label: "Project Budget",
+          type: "select",
+          options: ["Fixed Price", "Hourly"],
+          required: true,
+        },
+        {
+          name: "budget_amount",
+          label: "Budget Amount",
+          type: "number",
+          placeholder: "Enter budget amount",
+          required: true,
+        },
+        {
+          name: "project_deadline",
+          label: "Project Deadline",
+          type: "date",
+          required: true,
+        },
+        {
+          name: "preferred_freelancers",
+          label: "Preferred Freelancers",
+          type: "text",
+          placeholder: "Specify if any",
+          required: false,
+        },
+        {
+          name: "file_attachments",
+          label: "File Attachments",
+          type: "file",
+          required: false,
+        },
+      ],
+      submit_button: {
+        text: "Post Project",
+        type: "submit",
+      },
+    },
+    benefits_section: {
+      title: "Why Post a Project with Us?",
+      benefits: [
+        "Secure Payments: Ensure safe and timely transactions with our escrow system.",
+        "Easy Collaboration: Streamlined communication tools to collaborate effectively.",
+        "Access to Diverse Talent: Connect with freelancers from various industries and expertise levels.",
+        "Quality Assurance: Access to freelancer ratings and reviews to choose the best fit for your project.",
+      ],
+    },
+  },
+  browse_projects_section: {
+    title: "Browse Freelance Projects",
+    filters_and_sorting: {
+      filters: {
+        categories: [
+          "Web Development",
+          "Design",
+          "Marketing",
+          "Writing",
+          "Data Science",
+          "Mobile App Development",
+        ],
+        budget: ["Low ($0-$500)", "Medium ($500-$2000)", "High ($2000+)"],
+        duration: ["Short-term (1-3 months)", "Long-term (3+ months)"],
+        experience_level: ["Beginner", "Intermediate", "Expert"],
+      },
+      sorting_options: ["Newest", "Highest Paying", "Deadline Soon"],
+    },
+    project_listings: {
+      view_mode: "grid", // Options: "grid", "list"
+      projects: [
+        {
+          id: 1,
+          title: "Develop a Responsive E-commerce Website",
+          budget: "$1500",
+          posted_by: "Tech Solutions Inc.",
+          project_description:
+            "Looking for an experienced web developer to create a responsive e-commerce website with payment integration and user-friendly interface.",
+          required_skills: ["React", "Node.js", "MongoDB", "CSS"],
+          deadline: "2024-12-15",
+          apply_button_text: "Apply Now",
+          project_link: "#project-details-1",
+        },
+        {
+          id: 2,
+          title: "Logo Design for New Startup",
+          budget: "$300",
+          posted_by: "Creative Minds",
+          project_description:
+            "Seeking a creative graphic designer to design a unique and memorable logo for our new startup in the fintech industry.",
+          required_skills: ["Adobe Illustrator", "Graphic Design", "Branding"],
+          deadline: "2024-11-30",
+          apply_button_text: "Apply Now",
+          project_link: "#project-details-2",
+        },
+        {
+          id: 3,
+          title: "Digital Marketing Campaign for Product Launch",
+          budget: "$2000",
+          posted_by: "MarketGurus",
+          project_description:
+            "Need a digital marketer to strategize and execute a comprehensive marketing campaign for our upcoming product launch.",
+          required_skills: [
+            "SEO",
+            "Content Marketing",
+            "Social Media Marketing",
+          ],
+          deadline: "2024-11-20",
+          apply_button_text: "Apply Now",
+          project_link: "#project-details-3",
+        },
+        {
+          id: 4,
+          title: "Mobile App Development for Fitness Tracker",
+          budget: "$5000",
+          posted_by: "HealthTech",
+          project_description:
+            "Looking for a skilled mobile app developer to create a fitness tracker app compatible with both iOS and Android platforms.",
+          required_skills: [
+            "Swift",
+            "Kotlin",
+            "React Native",
+            "API Integration",
+          ],
+          deadline: "2025-01-10",
+          apply_button_text: "Apply Now",
+          project_link: "#project-details-4",
+        },
+        {
+          id: 5,
+          title: "Content Writer for Blog Series",
+          budget: "$800",
+          posted_by: "BlogSphere",
+          project_description:
+            "Seeking talented content writers to produce a series of blog posts on technology and innovation topics.",
+          required_skills: ["Content Writing", "SEO", "Research"],
+          deadline: "2024-12-05",
+          apply_button_text: "Apply Now",
+          project_link: "#project-details-5",
+        },
+      ],
+      pagination: {
+        current_page: 1,
+        total_pages: 5,
+        items_per_page: 5,
+      },
+    },
+  },
+  featured_projects_section: {
+    title: "Featured Projects",
+    projects: [
+      {
+        id: 101,
+        title: "Advanced Data Analytics Dashboard",
+        budget: "$3000",
+        posted_by: "DataPros LLC",
+        project_description:
+          "Develop a comprehensive data analytics dashboard with real-time data visualization and reporting features.",
+        required_skills: ["Python", "Django", "React", "Data Visualization"],
+        deadline: "2025-02-28",
+        apply_button_text: "Apply Now",
+        project_link: "#project-details-101",
+        image_url: "https://picsum.photos/600/400?random=1",
+        premium: true,
+      },
+      {
+        id: 102,
+        title: "Full-Stack Development for SaaS Platform",
+        budget: "$7000",
+        posted_by: "Innovatech",
+        project_description:
+          "Looking for a full-stack developer to build and maintain our SaaS platform with a focus on scalability and performance.",
+        required_skills: ["Node.js", "React", "AWS", "Microservices"],
+        deadline: "2025-03-15",
+        apply_button_text: "Apply Now",
+        project_link: "#project-details-102",
+        image_url: "https://picsum.photos/600/400?random=2",
+        premium: true,
+      },
+      {
+        id: 103,
+        title: "UI/UX Redesign for Mobile Application",
+        budget: "$2500",
+        posted_by: "AppDesigners",
+        project_description:
+          "Need a creative UI/UX designer to revamp the user interface and experience of our existing mobile application.",
+        required_skills: ["Figma", "Adobe XD", "User Research", "Prototyping"],
+        deadline: "2025-01-25",
+        apply_button_text: "Apply Now",
+        project_link: "#project-details-103",
+        image_url: "https://picsum.photos/600/400?random=3",
+        premium: true,
+      },
+    ],
+  },
+  freelancer_success_stories: {
+    title: "Freelancer Success Stories",
+    stories: [
+      {
+        freelancer_name: "Jane Doe",
+        testimonial:
+          "Posting my project on this platform was a game-changer. I connected with a talented developer who delivered exceptional work ahead of schedule.",
+        project_title: "Develop a Responsive E-commerce Website",
+        image_url: "https://picsum.photos/100/100?random=1",
+        success_date: "2024-11-20",
+      },
+      {
+        freelancer_name: "John Smith",
+        testimonial:
+          "I found amazing design projects here that matched my skills perfectly. The secure payment system gave me peace of mind.",
+        project_title: "Logo Design for New Startup",
+        image_url: "https://picsum.photos/100/100?random=2",
+        success_date: "2024-12-05",
+      },
+      {
+        freelancer_name: "Emily Johnson",
+        testimonial:
+          "The platform's filtering options made it easy to find high-paying projects. I've significantly grown my freelance business thanks to this site.",
+        project_title: "Digital Marketing Campaign for Product Launch",
+        image_url: "https://picsum.photos/100/100?random=3",
+        success_date: "2024-12-15",
+      },
+      {
+        freelancer_name: "Michael Brown",
+        testimonial:
+          "Collaborating on the mobile app development project was seamless. The client was clear with their requirements and the project was a huge success.",
+        project_title: "Mobile App Development for Fitness Tracker",
+        image_url: "https://picsum.photos/100/100?random=4",
+        success_date: "2025-01-10",
+      },
+    ],
+  },
+};
+
+export const WhyUsData = {
+  advantages_in_detail: [
+    {
+      title: "Escrow Payments for Transparency",
+      description:
+        "Both clients and freelancers are protected through our escrow payment system. Funds are only released after the project is completed and both parties are satisfied.",
     },
     {
-      color: "red",
-      imageUrl: `${event5}`,
-      title: "Keynote Session: Navigating the Gig Economy",
-      date: "September 22, 2023",
-      time: "1:00 PM - 2:30 PM",
-      location: "Virtual Event (YouTube)",
-      previewText:
-        "Industry experts shared insights on how to thrive in the gig economy, covering topics from finding high-paying clients to managing work-life balance.",
-      cta: "Watch Now",
+      title: "Skill-Based Matching, Not Degrees",
+      description:
+        "Unlike other platforms that prioritize education, Swarojgar focuses on connecting freelancers with clients based on their skills and portfolio, giving opportunities to a wider range of professionals.",
     },
     {
-      color: "green",
-      imageUrl: `${event6}`,
-      title: "Live Q&A with Industry Leaders",
-      date: "August 15, 2023",
-      time: "4:00 PM - 5:00 PM",
-      location: "Virtual Event (Google Meet)",
-      previewText:
-        "Freelancers had the opportunity to ask questions and receive expert guidance during our live Q&A session. The session provided valuable strategies to tackle freelance challenges.",
-      cta: "Watch Q&A",
+      title: "Group Freelancing for Large Projects",
+      description:
+        "Swarojgar allows freelancers to form teams and bid on larger contracts, which promotes collaboration and enables the completion of complex projects.",
     },
     {
-      color: "yellow",
-      imageUrl: `${event1}`,
-      title: "Panel Discussion: Future of Remote Work",
-      date: "July 18, 2023",
-      time: "3:00 PM - 4:30 PM",
-      location: "Virtual Event (Zoom)",
-      previewText:
-        "A forward-looking panel discussion about the evolving landscape of remote work, exploring new opportunities and challenges freelancers will face in the coming years.",
-      cta: "View Discussion",
+      title: "Diversity Initiatives for Women Freelancers",
+      description:
+        "By providing 50% exemption on service fees for women freelancers, Swarojgar is helping to create a more inclusive and diverse workforce in the freelancing industry.",
     },
-  ];
+    {
+      title: "Multilingual Support for Global Reach",
+      description:
+        "With integrated multilingual support, Swarojgar breaks language barriers, allowing clients and freelancers from different countries to communicate and collaborate efficiently.",
+    },
+    {
+      title: "Community Events and Networking",
+      description:
+        "Regularly scheduled community events and networking opportunities help freelancers and clients build lasting professional relationships, expanding their reach beyond the platform.",
+    },
+    {
+      title: "NDA Contracts for Confidentiality",
+      description:
+        "Swarojgar implements NDA contracts to ensure that all project details and sensitive information remain confidential between clients and freelancers, providing peace of mind for both parties.",
+    },
+    {
+      title: "Achievement Badges and Leaderboard",
+      description:
+        "Freelancers can earn achievement badges and climb the leaderboard, giving them increased visibility on the platform. This motivates freelancers to continuously improve and excel in their work.",
+    },
+  ],
+  faqItems: [
+    {
+      question: "What unique features does Swarojgar offer?",
+      answer:
+        "Swarojgar provides features like project catalog for pre-built projects, secure escrow payment system, group freelancing, multilingual support, and an achievement leaderboard.",
+    },
+    {
+      question: "Can I form teams to work on bigger projects?",
+      answer:
+        "Yes, Swarojgar offers a team freelancing feature that allows you to collaborate with other freelancers on large projects.",
+    },
+    {
+      question: "How does Swarojgar ensure data security?",
+      answer:
+        "We use NDA contracts to maintain confidentiality between freelancers and clients. Additionally, all financial transactions are handled through a secure escrow account.",
+    },
+    {
+      question: "Is there support for non-English clients and freelancers?",
+      answer:
+        "Absolutely! Swarojgar offers multilingual support, allowing freelancers and clients from around the world to collaborate seamlessly.",
+    },
+    {
+      question: "What is the escrow system?",
+      answer:
+        "The escrow system ensures that payments are held securely until the work is completed to the client’s satisfaction. It protects both freelancers and clients.",
+    },
+    {
+      question: "Are there any benefits for women freelancers?",
+      answer:
+        "Yes! Women freelancers get a 50% exemption on service fees to promote diversity and empower women in the freelancing sector.",
+    },
+    {
+      question: "What is the project catalog feature?",
+      answer:
+        "Freelancers can showcase pre-built projects in the project catalog, allowing clients to purchase ready-made solutions without starting from scratch.",
+    },
+    {
+      question: "How does the leaderboard work?",
+      answer:
+        "Swarojgar’s leaderboard ranks freelancers based on their performance, helping them gain visibility and attract more clients based on achievements.",
+    },
+  ],
+  testimonialUser: [
+    {
+      userName: "Ravi Sharma",
+      role: "Web Developer",
+      description:
+        "Swarojgar has truly empowered me to expand my career. The secure escrow system ensures fair payments, and the project catalog has helped me land some great clients. I feel valued and confident while working on this platform.",
+    },
+    {
+      userName: "Anjali Deshmukh",
+      role: "Graphic Designer",
+      description:
+        "The women freelancer benefits have been amazing. The 50% exemption on service fees has made a big difference in my earnings. The escrow system has also been a blessing in securing timely payments from clients.",
+    },
+    {
+      userName: "Vikram Mehta",
+      role: "Mobile App Developer",
+      description:
+        "Swarojgar’s team freelancing feature has allowed me to collaborate with other developers to tackle larger projects. It’s a powerful feature that makes bigger contracts easier to manage.",
+    },
+    {
+      userName: "Sara Khan",
+      role: "Data Analyst",
+      description:
+        "The platform’s multilingual support opened up doors for me with international clients. It’s exciting to work across borders without the language barrier being an issue.",
+    },
+    {
+      userName: "Neha Dubey",
+      role: "Content Writer",
+      description:
+        "Swarojgar's leaderboard and achievement badges motivate me to stay competitive. I’ve gained visibility on the platform through these features, and it has helped me land more consistent work.",
+    },
+    {
+      userName: "Rohit Agarwal",
+      role: "Software Engineer",
+      description:
+        "The secure payment system sets Swarojgar apart. Knowing that the funds are held in escrow until the project is completed gives me peace of mind, and the dispute resolution process is clear and effective.",
+    },
+  ],
+};
+
+export const Navitems = [
+  {
+    id: 0,
+    title: "Home",
+    link: "/",
+  },
+  {
+    id: 1,
+    title: "Sarthi",
+    link: "/sarthi",
+  },
+  {
+    id: 2,
+    title: "Jobs",
+    link: "/jobs",
+  },
+  {
+    id: 3,
+    title: "Quick Search",
+    link: "/quick-search",
+  },
+  {
+    id: 4,
+    title: "Catalogue",
+    link: "/catalogue",
+  },
+  {
+    id: 5,
+    title: "Events",
+    link: "/events",
+  },
+  {
+    id: 6,
+    title: "Why Us?",
+    link: "/why-us",
+  },
+];
+

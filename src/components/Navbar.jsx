@@ -1,43 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
-const items = [
-  {
-    id: 0,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 1,
-    title: "Sarthi",
-    link: "/sarthi",
-  },
-  {
-    id: 2,
-    title: "Jobs",
-    link: "/jobs",
-  },
-  {
-    id: 3,
-    title: "Quick Search",
-    link: "/quick-search",
-  },
-  {
-    id: 4,
-    title: "Catalogue",
-    link: "/catalogue",
-  },
-  {
-    id: 5,
-    title: "Events",
-    link: "/events",
-  },
-  {
-    id: 6,
-    title: "Why Us?",
-    link: "/why-us",
-  },
-];
+import {Navitems} from "../db/db";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selected, setSelected] = useState("");
@@ -71,7 +36,7 @@ const Navbar = () => {
             isMenuOpen ? "block" : "hidden"
           }`}
         >
-          {items.map((item) => (
+          {Navitems.map((item) => (
             <li key={item.id}>
               <Link
                 onClick={() => setSelected(item.title)}
@@ -135,7 +100,7 @@ const Navbar = () => {
             </div>
             <div>
               <ul>
-                {items.map((item) => (
+                {Navitems.map((item) => (
                   <li className="mb-1" key={item.id}>
                     <Link
                       className="block p-4 text-base font-semibold dark:text-gray-400 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
