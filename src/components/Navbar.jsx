@@ -3,6 +3,11 @@ import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
 const items = [
   {
+    id: 0,
+    title: "Home",
+    link: "/",
+  },
+  {
     id: 1,
     title: "Sarthi",
     link: "/sarthi",
@@ -42,8 +47,8 @@ const Navbar = () => {
   return (
     <div className="">
       <nav className="relative px-4 py-4 flex justify-between items-center dark:bg-gray-900 bg-slate-200">
-        <Link className="text-3xl font-bold leading-none h-20" to="/">
-          <img src={logo} alt="logo" className="h-20 px-10" />
+        <Link className="text-3xl font-bold leading-none h-20 xl:h-20 lg:h-14" to="/">
+          <img src={logo} alt="logo" className="h-20  px-10 lg:px-1 lg:h-16 xl:h-20" />
         </Link>
         <div className="lg:hidden">
           <button
@@ -62,56 +67,32 @@ const Navbar = () => {
           </button>
         </div>
         <ul
-          className={` lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6  ${
-            isMenuOpen ? "block " : "hidden"
-          } absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 
-           
-          `}
+          className={`hidden lg:flex lg:items-center lg:justify-center xl:w-2/3 lg:w-3/5  xl:gap-6  lg:space-x-6 ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
         >
           {items.map((item) => (
-            <div key={item.id} className="flex justify-between gap-4">
-              <li>
-                <Link
-                  onClick={() => setSelected(item.title)}
-                  className={`text-base text-gray-700 dark:text-gray-100 hover:dark:text-gray-300 font-sembold hover:text-gray-500  ${
-                    selected === item.title ? "text-gray-600 font-bold " : ""
-                  }`}
-                  to={item.link}
-                >
-                  {item.title}
-                </Link>
-              </li>
-              <li
-                className={`text-gray-300 flex items-center justify-center ${
-                  item.id === 6 ? "hidden" : ""
+            <li key={item.id}>
+              <Link
+                onClick={() => setSelected(item.title)}
+                className={`xl:text-base lg:text-sm text-gray-700 dark:text-gray-100 hover:dark:text-gray-300 font-semibold hover:text-gray-500 ${
+                  selected === item.title ? "text-gray-600 font-bold" : ""
                 }`}
+                to={item.link}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  className="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
-            </div>
+                {item.title}
+              </Link>
+            </li>
           ))}
         </ul>
         <Link
-          className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-7 bg-gray-100 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-2xl transition duration-200"
+          className="hidden lg:inline-block   lg:py-2 lg:px-5 xl:ml-auto xl:mr-3 xl:py-2 xl:px-7 bg-gray-100 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-2xl transition duration-200"
           to="/login"
         >
           Sign In
         </Link>
         <Link
-          className="hidden lg:inline-block py-2 px-7 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-2xl transition duration-200"
+          className="hidden lg:inline-block   lg:py-2 lg:px-5 xl:ml-auto xl:mr-3 xl:py-2 xl:px-7 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-2xl transition duration-200"
           to="/signup"
         >
           Sign Up
@@ -167,7 +148,7 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="mt-auto">
-              <div className="pt-6">
+              <div className="xl:pt-6 pt-6 lg:pt-">
                 <Link
                   onClick={() => toggleMenu()}
                   className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
@@ -190,6 +171,7 @@ const Navbar = () => {
           </nav>
         </div>
       )}
+      
     </div>
   );
 };

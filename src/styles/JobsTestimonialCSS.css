@@ -1,0 +1,100 @@
+#testimonials {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #eceff1;
+    border-radius: 15px;
+    overflow: hidden;
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        user-select: none;
+        flex-grow: 1;
+  
+        @media (min-width: 768px) {
+          width: 45%;
+        }
+  
+        @media (min-width: 1024px) {
+          width: 23%;
+        }
+  
+        .testimonial-body {
+          flex-grow: 1;
+          margin: 0;
+          quotes: "“" "”";
+          &:before, &:after {
+            display: inline-block;
+            transform: scale(1.25);
+          }
+          &:before { content: open-quote; }
+          &:after { content: close-quote; }
+        }
+  
+        .testimonial-profile {
+          align-items: center;
+          margin-top: 0.75rem;
+  
+          .img-cover {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 7px 10px -2px rgba(0, 0, 0, 0.55);
+            background: rgba(0, 0, 0, 0.375);
+            opacity: 0;
+            z-index: 1;
+          }
+  
+          svg {
+            width: 48px;
+            height: 48px;
+            margin-right: 0.75rem;
+          }
+  
+          img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 7px 10px -2px rgba(0, 0, 0, 0.55);
+          }
+  
+          span {
+            font-weight: 500;
+            color: #333;
+          }
+  
+          small {
+            font-weight: 300;
+            color: #666;
+            &[data-social="facebook"]:before {
+              content: '\f082';
+              color: #3b5998;
+            }
+            &[data-social="twitter"]:before {
+              content: '\f099';
+              color: #1da1f2;
+            }
+            &[data-social="google"]:before {
+              content: '\f0d5';
+              color: #ea4335;
+            }
+          }
+        }
+      }
+    }
+  }
+  
